@@ -197,13 +197,17 @@ body {
 
 .character img {
     height: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .fight {
     position: absolute;
     z-index: 100;
-    top: 20%;
+    top: 30%;
     width: 300px;
+    left: 50%;
+    transform: translate(-50%, 0%);
 }
 
 .fight img {
@@ -260,6 +264,13 @@ body {
 }
 .button:active::after {
     top: 1px;
+}
+
+.button:disabled {
+    opacity: .8;
+}
+.button:disabled:after {
+    opacity: .4;
 }
 
 .loseTitle {
