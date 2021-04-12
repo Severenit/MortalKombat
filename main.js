@@ -6,8 +6,11 @@ const player1 = {
     name: 'SCORPION',
     hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
-    attack: function(name) {
-        console.log(name + ' ' + 'Fight...');
+    elHP,
+    changeHP,
+    renderHP,
+    attack: function() {
+        console.log(this.name + ' ' + 'Fight...');
     },
 }
 
@@ -16,8 +19,11 @@ const player2 = {
     name: 'LIU KANG',
     hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/liukang.gif',
-    attack: function(name) {
-        console.log(name + ' ' + 'Fight...');
+    elHP: elHP,
+    changeHP: changeHP,
+    renderHP: renderHP,
+    attack: function() {
+        console.log(this.name + ' ' + 'Fight...');
     },
 }
 
@@ -53,15 +59,20 @@ function createPlayer(playerObj) {
     return $player;
 }
 
-function changeHP(player) {
-    const $playerLife = document.querySelector('.player'+ player.player +' .life');
-    player.hp -= getRandom(20);
+function elHP() {
+    return document.querySelector('.player'+this.player+' .life');
+}
 
-    if (player.hp <= 0) {
-        player.hp = 0;
+function changeHP(randomNumber) {
+    this.hp -= randomNumber;
+
+    if (this.hp <= 0) {
+        this.hp = 0;
     }
+}
 
-    $playerLife.style.width = player.hp + '%';
+function renderHP() {
+    this.elHP().style.width = this.hp + '%';
 }
 
 function playerLose(name) {
@@ -80,8 +91,11 @@ function getRandom(num) {
 }
 
 $randomButton.addEventListener('click', function() {
-    changeHP(player1);
-    changeHP(player2);
+    player1.changeHP(getRandom(20));
+    player1.renderHP();
+
+    player2.changeHP(getRandom(20));
+    player2.renderHP();
 
     if (player2.hp === 0 || player1.hp === 0) {
         $randomButton.disabled = true;
