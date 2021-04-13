@@ -6,12 +6,10 @@ const player1 = {
     name: 'SCORPION',
     hp: 100,
     img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
-    elHP,
-    changeHP,
-    renderHP,
-    attack: function() {
-        console.log(this.name + ' ' + 'Fight...');
-    },
+    elHP: elHP,
+    changeHP: changeHP,
+    renderHP: renderHP,
+    attack: attack,
 }
 
 const player2 = {
@@ -22,9 +20,11 @@ const player2 = {
     elHP: elHP,
     changeHP: changeHP,
     renderHP: renderHP,
-    attack: function() {
-        console.log(this.name + ' ' + 'Fight...');
-    },
+    attack: attack,
+}
+
+function attack() {
+    console.log(this.name + ' ' + 'Fight...');
 }
 
 function createElement(tag, className) {
