@@ -214,18 +214,6 @@ body {
     width: 100%;
 }
 
-.control {
-    position: absolute;
-    width: 200px;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
 .button {
     display: block;
     position: relative;
@@ -267,15 +255,25 @@ body {
 }
 
 .button:disabled {
-    opacity: .8;
+    opacity: .9;
+    cursor: not-allowed;
 }
+
 .button:disabled:after {
-    opacity: .4;
+    opacity: .1;
+}
+
+.button:disabled:active {
+    top: 0px;
+}
+
+.button:disabled:active::after {
+    top: 4px;
 }
 
 .loseTitle {
     position: absolute;
-    top: 25%;
+    top: 22%;
     left: 50%;
     font-size: 36px;
     transform: translate(-50%, 0%);
@@ -283,6 +281,7 @@ body {
     z-index: 1000;
     color: white;
     font-family: "Mortal Kombat 3";
+    text-shadow: 2px 2px 2px #cd0e03;
 }
 
 .reloadWrap {
@@ -297,10 +296,37 @@ body {
     margin-top: 0;
 }
 
-
-.formFight {
+form:invalid button[class=button] {
+    opacity: .9;
+    cursor: not-allowed;
 }
-.radioWrap {
+
+form:invalid button[class=button]:after {
+    opacity: .1;
+}
+
+form:invalid button[class=button]:active {
+    top: 0px;
+}
+
+form:invalid button[class=button]:active::after {
+    top: 4px;
+}
+
+.control {
+    position: absolute;
+    width: 200px;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.inputWrap {
     position: relative;
     width: 280px;
 }
@@ -309,7 +335,7 @@ body {
     margin-top: 36px;
 }
 
-.radioWrap h2 {
+.inputWrap h2 {
     text-align: center;
     margin: 0 auto 20px;
     font-weight: 700;

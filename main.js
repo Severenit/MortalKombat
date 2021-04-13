@@ -112,8 +112,8 @@ function createReloadButton() {
 }
 
 function showResult() {
-    const $randomButton = document.querySelector('.buttonWrap .button');
     if (player2.hp === 0 || player1.hp === 0) {
+        const $randomButton = document.querySelector('.buttonWrap .button');
         $randomButton.disabled = true;
         createReloadButton();
     }
@@ -142,6 +142,7 @@ function playerAttack() {
 }
 
 $formFight.addEventListener('submit', function(event) {
+    console.log('####: event', event);
     event.preventDefault();
     const input = document.forms[0].getElementsByTagName('input');
 
