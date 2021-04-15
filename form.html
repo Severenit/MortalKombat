@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <form class="form">
+        <label for="name">
+            <input type="text" id="name" placeholder="Name" name="name">
+        </label>
+        <label for="male">
+            <input type="radio" id="male" name="sex" value="male"> М
+        </label>
+        <label for="female">
+            <input type="radio" id="female" name="sex" value="female"> Ж
+        </label>
+        <textarea name="notion" id="notion" cols="30" rows="10"></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <script src="form.js"></script>
+    <style>
+        .form {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form label {
+            margin-bottom: 12px;
+        }
+        .form textarea {
+            margin-bottom: 12px;
+        }
+    </style>
+</body>
+</html>
