@@ -1,14 +1,41 @@
-export const player = {
-    player: 1,
-    name: 'SCORPION',
-    hp: 100,
-    img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
+class Player {
+    constructor(props) {
+        console.log('####: ', this);
+        this.name = props.name;
+        this.hp = props.hp;
+        this.type = props.type;
+    }
+
+    whoop = () => {
+        console.log(`${this.name} let's fight!`);
+    }
 }
 
-export const playerNew = {
-    player: 1,
-    name: 'SCORPION',
+const player1 = new Player({
+    name: 'Scorpion',
     hp: 100,
-    img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
+    type: 'fighters',
+});
+
+console.log(player1);
+
+class Player1 extends Player {
+    constructor(props) {
+        super(props);
+
+        this.winners = props.winners;
+    }
+
+    whoop = () => {
+        console.log('This is new WHOOP');
+    }
 }
 
+const player2 = new Player1({
+    name: 'Kitana',
+    hp: 100,
+    type: 'fighters',
+    winners: true,
+});
+
+console.log(player2);
