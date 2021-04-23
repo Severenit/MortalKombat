@@ -1,5 +1,17 @@
-function getRandom(num) {
+export function getRandom(num) {
     return Math.ceil(Math.random() * num);
 }
 
-export default getRandom;
+export function createElement(tag, className) {
+    const $tag = document.createElement(tag);
+    if (className) {
+        $tag.classList.add(className);
+    }
+
+    return $tag;
+}
+
+export function getTime() {
+    const date = new Date();
+    return `${date.getHours()}:${date.getMinutes()}`;
+}
