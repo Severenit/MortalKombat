@@ -1,4 +1,4 @@
-import { getRandom, createElement, getTime } from './utils2.js';
+import { getRandom, createElement, getTime } from './utils/index.js';
 import { HIT, LOGS, ATTACK } from './constants/index.js';
 import Player from './Player/index.js';
 
@@ -18,7 +18,9 @@ class Game {
     start = async () => {
         const players = await this.getPlayers();
         let p1 = players[getRandom(players.length) - 1];
+
         if (localStorage.getItem('player')) {
+            console.log('####: localStorage.getItem(\'player\')', localStorage.getItem('player'));
             p1 = JSON.parse(localStorage.getItem('player'));
         }
 
