@@ -1,4 +1,4 @@
-import { getRandom, createElement, getTime } from './utils/utils.js';
+import { getRandom, createElement, getTime } from 'utils';
 import { HIT, LOGS, ATTACK } from './constants/index.js';
 import Player from './Player/index.js';
 
