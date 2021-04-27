@@ -21,7 +21,7 @@ class Game {
         if (localStorage.getItem('player')) {
             p1 = JSON.parse(localStorage.getItem('player'));
         }
-        
+
         const p2 = players[getRandom(players.length) - 1];
         console.log(p1, p2);
         player1 = new Player({
