@@ -1,6 +1,6 @@
-import { getRandom, createElement, getTime } from './utils';
-import { HIT, LOGS, ATTACK } from './constants';
-import Player from './Player';
+import { getRandom, createElement, getTime } from './utils/index.js';
+import { HIT, LOGS, ATTACK } from './constants/index.js';
+import Player from './Player/index.js';
 
 const $arenas = document.querySelector('.arenas');
 const $formFight = document.querySelector('.control');
@@ -17,7 +17,11 @@ class Game {
 
     start = async () => {
         const players = await this.getPlayers();
-        const p1 = players[getRandom(players.length) - 1];
+        let p1 = players[getRandom(players.length) - 1];
+        if (localStorage.getItem('player')) {
+            p1 = JSON.parse(localStorage.getItem('player'));
+        }
+        
         const p2 = players[getRandom(players.length) - 1];
         console.log(p1, p2);
         player1 = new Player({
