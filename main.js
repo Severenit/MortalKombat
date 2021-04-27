@@ -6,21 +6,40 @@ const $arenas = document.querySelector('.arenas');
 const $formFight = document.querySelector('.control');
 const $chat = document.querySelector('.chat');
 
-const player1 = new Player({
-    player: 1,
-    name: 'SCORPION',
-    hp: 100,
-    img: 'http://reactmarathon-api.herokuapp.com/assets/scorpion.gif',
-    rootSelector: 'arenas',
-});
+let player1;
+let player2;
 
-const player2 = new Player({
-    player: 2,
-    name: 'LIU KANG',
-    hp: 100,
-    img: 'http://reactmarathon-api.herokuapp.com/assets/liukang.gif',
-    rootSelector: 'arenas',
-});
+class Game {
+    getPlayers = async () => {
+        const body = fetch('https://reactmarathon-api.herokuapp.com/api/mk/players').then(res => res.json());
+        return body;
+    }
+
+    start = async () => {
+        const players = await this.getPlayers();
+        const p1 = players[getRandom(players.length) - 1];
+        const p2 = players[getRandom(players.length) - 1];
+        console.log(p1, p2);
+        player1 = new Player({
+            ...p1,
+            player: 1,
+            rootSelector: 'arenas',
+        });
+        player2 = new Player({
+            ...p2,
+            player: 2,
+            rootSelector: 'arenas',
+        });
+        player1.createPlayer();
+        player2.createPlayer();
+
+        generateLogs('start', player1, player2);
+    }
+}
+
+const game = new Game();
+game.start();
+
 
 function playerLose(name) {
     const $loseTitle = createElement('div', 'loseTitle');
@@ -161,13 +180,4 @@ $formFight.addEventListener('submit', function(e) {
     }
 
     showResult();
-})
-
-function init() {
-    player1.createPlayer();
-    player2.createPlayer();
-
-    generateLogs('start', player1, player2);
-}
-
-init();
+});
