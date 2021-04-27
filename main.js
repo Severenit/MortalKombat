@@ -19,9 +19,9 @@ class Game {
         const players = await this.getPlayers();
         let p1 = players[getRandom(players.length) - 1];
 
-        if (localStorage.getItem('player')) {
-            console.log('####: localStorage.getItem(\'player\')', localStorage.getItem('player'));
-            p1 = JSON.parse(localStorage.getItem('player'));
+        if (localStorage.getItem('player1')) {
+            p1 = JSON.parse(localStorage.getItem('player1'));
+            localStorage.removeItem('player1');
         }
 
         const p2 = players[getRandom(players.length) - 1];
