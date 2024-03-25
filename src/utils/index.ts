@@ -1,9 +1,10 @@
-export const getRandom = (num) => {
-    return Math.ceil(Math.random() * num);
+export const getRandom = (number: number) => {
+    return Math.ceil(Math.random() * number);
 }
 
-export const createElement = (tag, className) => {
+export const createElement = (tag: string, className?: string): HTMLElement | HTMLImageElement => {
     const $tag = document.createElement(tag);
+
     if (className) {
         $tag.classList.add(className);
     }

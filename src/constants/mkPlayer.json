@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "name": "RAIN",
+      "img": "/assets/mk/fightingStance/rain.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/1.png"
+    },
+    {
+      "id": 2,
+      "name": "REPTILE",
+      "img": "/assets/mk/fightingStance/reptile.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/2.png"
+    },
+    {
+      "id": 3,
+      "name": "STRYKER",
+      "img": "/assets/mk/fightingStance/stryker.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/3.png"
+    },
+    {
+      "id": 4,
+      "name": "JAX",
+      "img": "/assets/mk/fightingStance/jax.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/4.png"
+    },
+    {
+      "id": 5,
+      "name": "NIGHT WOLF",
+      "img": "/assets/mk/fightingStance/nightwolf.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/5.png"
+    },
+    {
+      "id": 6,
+      "name": "JADE",
+      "img": "/assets/mk/fightingStance/jade.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/6.png"
+    },
+    {
+      "id": 7,
+      "name": "NOOB SAIBOT",
+      "img": "/assets/mk/fightingStance/noobsaibot.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/7.png"
+    },
+    {
+      "id": 8,
+      "name": "SONYA",
+      "img": "/assets/mk/fightingStance/sonya.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/8.png"
+    },
+    {
+      "id": 9,
+      "name": "KANO",
+      "img": "/assets/mk/fightingStance/kano.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/9.png"
+    },
+    {
+      "id": 10,
+      "name": "MILEENA",
+      "img": "/assets/mk/fightingStance/mileena.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/10.png"
+    },
+    {
+      "id": 12,
+      "name": "SUB-ZERO",
+      "img": "/assets/mk/fightingStance/subzero1.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/12.png"
+    },
+    {
+      "id": 13,
+      "name": "SUB-ZERO",
+      "img": "/assets/mk/fightingStance/subzero.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/13.png"
+    },
+    {
+      "id": 14,
+      "name": "KUNG LAO",
+      "img": "/assets/mk/fightingStance/kunglao.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/14.png"
+    },
+    {
+      "id": 15,
+      "name": "SEKTOR",
+      "img": "/assets/mk/fightingStance/sektor.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/15.png"
+    },
+    {
+      "id": 16,
+      "name": "KITANA",
+      "hp": 100,
+      "img": "/assets/mk/fightingStance/kitana.gif",
+      "avatar": "/assets/mk/avatar/16.png"
+    },
+    {
+      "id": 17,
+      "name": "ERMAC",
+      "img": "/assets/mk/fightingStance/ermac.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/17.png"
+    },
+    {
+      "id": 18,
+      "name": "SCORPION",
+      "hp": 100,
+      "img": "/assets/mk/fightingStance/scorpion.gif",
+      "avatar": "/assets/mk/avatar/18.png"
+    },
+    {
+      "id": 19,
+      "name": "CYRAX",
+      "img": "/assets/mk/fightingStance/cyrax.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/19.png"
+    },
+    {
+      "id": 20,
+      "name": "KABAL",
+      "img": "/assets/mk/fightingStance/kabal.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/20.png"
+    },
+    {
+      "id": 21,
+      "name": "SINDEL",
+      "img": "/assets/mk/fightingStance/sindel.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/21.png"
+    },
+    {
+      "id": 22,
+      "name": "SMOKE",
+      "img": "/assets/mk/fightingStance/smoke.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/22.png"
+    },
+    {
+      "id": 23,
+      "name": "LIU KANG",
+      "img": "/assets/mk/fightingStance/liukang.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/23.png"
+    },
+    {
+      "id": 24,
+      "name": "SHANG TSUNG",
+      "img": "/assets/mk/fightingStance/shangtsung.gif",
+      "hp": 100,
+      "avatar": "/assets/mk/avatar/24.png"
+    }
+  ]

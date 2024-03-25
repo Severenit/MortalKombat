@@ -1,7 +1,21 @@
 import { createElement } from '../utils/index.js';
 
+interface PlayerProps {
+    name: string;
+    hp: number;
+    img: string;
+    player: number;
+    rootSelector: string;
+}
+
 class Player {
-    constructor(props) {
+    public name: string;
+    public hp: number;
+    public img: string;
+    public player: number;
+    public selector: string;
+    public rootSelector: string;
+    constructor(props: PlayerProps) {
         this.name = props.name;
         this.hp = props.hp;
         this.img = props.img;
@@ -10,11 +24,11 @@ class Player {
         this.rootSelector = props.rootSelector;
     }
 
-    elHP = () => {
-        return document.querySelector(`.${this.selector} .life`);
+    elHP = (): HTMLElement => {
+        return document.querySelector(`.${this.selector} .life`) as HTMLElement;
     }
 
-    changeHP = (randomNumber) => {
+    changeHP = (randomNumber: number) => {
         this.hp -= randomNumber;
 
         if (this.hp <= 0) {
@@ -32,7 +46,7 @@ class Player {
         const $character = createElement('div', 'character');
         const $life = createElement('div', 'life');
         const $name = createElement('div', 'name');
-        const $img = createElement('img');
+        const $img = createElement('img') as HTMLImageElement;
 
         $life.style.width = this.hp +'%';
         $name.innerText = this.name;
@@ -47,6 +61,10 @@ class Player {
         $player.appendChild($character);
 
         const $root = document.querySelector(`.${this.rootSelector}`);
+        if (!$root) {
+            throw new Error('Root not found');
+        }
+        
         $root.appendChild($player);
 
         return $player;
