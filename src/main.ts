@@ -2,6 +2,7 @@ import { ATTACK, HIT, LOGS } from './constants'
 import Player from './Player'
 import { getRandom, createElement, getTime } from './utils/index'
 import mkPlayer from './constants/mkPlayer.json'
+import { GameController } from './controller'
 
 const $arenas = document.querySelector('.arenas')
 const $formFight = document.querySelector('.control') as HTMLFormElement
@@ -11,6 +12,9 @@ if (!$formFight) {
 }
 
 const $chat = document.querySelector('.chat')
+
+const game = new GameController();
+game.init();
 
 let player1: Player
 let player2: Player
@@ -48,8 +52,8 @@ class Game {
   }
 }
 
-const game = new Game()
-game.start()
+// const game = new Game()
+// game.start()
 
 function playerLose(name?: string) {
   const $loseTitle = createElement('div', 'loseTitle')
